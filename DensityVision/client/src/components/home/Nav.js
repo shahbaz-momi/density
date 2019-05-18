@@ -11,7 +11,6 @@ class Logo extends Component {
                 Stack
                 Docs
                 Team
-                More
             <hr />
         </div>
       );
