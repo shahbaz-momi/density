@@ -119,6 +119,36 @@ void wifi_sniffer_packet_handler(uint8_t *buff, uint16_t len)
 }
 
 void dump_serial() {
+// report like so:
+// START FRAME MARKER:
+// CHANNEL <channel>
+// REPORT <report>
+// END FRAME MARKER
+    Serial.print(FRAME_START);
+
+    Serial.print(channel);
+    Serial.print(SECTION_DIVIDER);
+
+    auto entries = cache.get_entries();
+
+    for(int i = 0; i < DEVICE_CAPACITY; i ++) {
+        if(entries[i].state == ALIVE) {
+            // output it
+            char addr[] = "00:00:00:00:00:00\0";
+            mac2str(entries[i].m.mac, addr);
+
+            Serial.print(addr);
+            Serial.print(SEGMENT_DIVIDER);
+            for(int j = 0; j < SAMPLE_CAPACITY; j ++) {
+                auto num = entries[i].m.samples[j];
+                if(num != 0) {
+                    Serial.print(num);
+                    Serial.print(SEGMENT_DIVIDER);
+                }
+            }
+            Serial.print(entries[i].m.num_occurrences);
+            Serial.print(SECTION_DIVIDER);
+        }
 
     }
 
