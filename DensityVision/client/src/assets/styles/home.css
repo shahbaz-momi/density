@@ -1,0 +1,42 @@
+.banner{
+    width: 100vw;
+}
+
+.home_landing{
+    width: 500px;
+}
+
+.col-6{
+    
+    text-align: center;
+}
+
+
+.intro_text{
+    margin-top: 20%;
+}
+
+.intro_text hr{
+    width: 70%;
+}
+
+.intro_text .btn{
+    padding : 0.5rem 2rem;
+    border-radius: 40px;
+    color: white;
+    border: none;
+    background-image: linear-gradient(#73d5f1, #4b88cb);
+    transition: all 0.25s ease;
+}
+.intro_text .btn:hover{
+    transform: scale(1.1);
+    padding : 0.5rem 1.5rem;
+    box-shadow: 0 0 5px gray;
+}
+
+
+.muted {
+    font-size: 0.8rem;
+    color: grey;
+    padding: 0 4rem;
+}

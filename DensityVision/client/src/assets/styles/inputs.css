@@ -1,23 +1,43 @@
 .ru_inputs input{
     border-radius: 20px;
-    border: solid white 3px;
-    box-shadow: 0 0 10px grey;
+    border: solid  #D8D8D8 3px;
+    background-color: #D8D8D8;
     padding: 0.5rem;
     width: 14rem;
     margin: 1.5rem;
+    color: #7F7F7F;
+    padding-left: 0.1rem;
+    font-size: 1rem;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
 }
 
+
 .ru_inputs button{
-    border-radius: 20px;
+    border-radius: 30px;
     background-image: linear-gradient(#73d5f1, #4b88cb);
     padding: 1rem;
     width: 8rem;
     color: white;
     font-family: 'Open Sans', sans-serif;
     font-size: 1rem;
+    transition: all 0.25s ease;
+}
 
+.ru_inputs button:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+    box-shadow: 0 0 5px #D8D8D8
 }
 
 .ru_inputs{
     text-align: center;
+}
+
+.ru_inputs .fas{
+    background: -webkit-linear-gradient(#63b6d9, #39679f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 0.5rem;
+    padding-right: 0;
 }

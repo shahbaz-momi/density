@@ -1,14 +1,13 @@
 import React, { Component, Fragment } from 'react';
-import Logo from './Logo';
-import Nav from './Nav';
 import Try from './Try';
+import HomeLanding from './HomeLanding';
+import '../../assets/styles/home.css';
 
 class Home extends Component {
   render(){
       return (
         <Fragment>
-          <Logo />
-          <Nav />
+          <HomeLanding />
           <Try />
         </Fragment>
       );

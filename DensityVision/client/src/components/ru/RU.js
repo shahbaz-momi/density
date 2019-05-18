@@ -28,10 +28,16 @@ class RU extends Component {
                 </div>
             </div>
             <div className = "ru_inputs">
-                <input></input>
-                <input></input>
-                <input></input>
-                <button>Enter</button>
+                 <i className="fas fa-lg fa-layer-group"></i>
+                <input className = "input_text" type="text" placeholder="SEARS ATRIUM"></input>
+                <i className="fas  fa-lg  fa-history"></i>
+                <input className = "input_text" type="text" placeholder="2:00PM"></input>
+                <i className="fas  fa-lg  fa-calendar-alt"></i>
+                <input className = "input_text" type="text" placeholder="MAY 17, 2019"></input>
+                <i className="fas  fa-lg  fa-power-off"></i>
+                <input className = "input_text" type="text" placeholder="LIVE"></input>
+                <br />
+                <button>ENTER</button>
 
             </div>
           <Map2 />

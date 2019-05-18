@@ -8,6 +8,7 @@ class App extends Component {
       return (
         <Fragment>
           <HashRouter >
+            <Header />
             <div>
               <Route path="/" exact component = {Home}/>
               <Route path="/ruhacks" exact component = {RU}/>
