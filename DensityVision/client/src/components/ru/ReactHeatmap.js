@@ -24,7 +24,7 @@ class ReactHeatmap extends Component {
   render(){
     const divStyle = {
       height: '600px',
-      width: '800px'
+      width: '100%'
     }
     return (
       <div style = {divStyle} id = "heatmapContainer"></div>

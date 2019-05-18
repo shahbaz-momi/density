@@ -1,11 +1,11 @@
 .map_container{
-    background-image: url(../images/ru_map.jpg);
+    background-image: url(../images/atrium.svg);
     border-radius: 20px;
     border: solid white 15px;
     box-shadow: 0 0 25px grey;
-
+    background-repeat: no-repeat;
+    background-size: auto;
     text-align: center;
-    padding: 3rem;
     margin: 10rem;
 }
 

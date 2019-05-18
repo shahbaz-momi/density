@@ -3,7 +3,7 @@ import ReactHeatmap from './ReactHeatmap';
 import { w3cwebsocket as W3CWebSocket } from "websocket";
 import '../../assets/styles/map.css';
 
-const client = new W3CWebSocket('ws://127.0.0.1:8000');
+const client = new W3CWebSocket('ws://127.0.0.1:3000');
 
 class Map2 extends Component {
     state = {
@@ -23,8 +23,9 @@ class Map2 extends Component {
     };
     client.onmessage = (message) => {
        let data = JSON.parse(message.data)
-       this.setState({x : data.x});
-       this.setState({y : data.y});
+       console.log(data);
+       this.setState({x : data.xCoordinate});
+       this.setState({y : data.yCoordinate});
     };
   }
     
@@ -32,10 +33,10 @@ class Map2 extends Component {
       const {x,y} = this.state
       
       var dataPoint = { 
-        x: 100+ x*400, 
-        y: 100+ y*400, 
+        x: x*100, 
+        y: y*100, 
         radius: 30,
-        value: 10 
+        value: 100 
       };
       var data = {
         max: 100,

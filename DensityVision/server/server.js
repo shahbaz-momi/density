@@ -10,7 +10,7 @@ wss.on('connection', ws => {
       y: Math.random()
     }
     ws.send(JSON.stringify(coord))
-  }, 10);
+  }, 1000);
 
 })
 

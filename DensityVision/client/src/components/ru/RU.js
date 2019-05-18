@@ -5,6 +5,7 @@ import '../../assets/styles/try.css';
 import ru_logo from '../../assets/images/ru_logo.svg';
 import library from '../../assets/images/library.svg';
 import streets from '../../assets/images/streets.svg';
+import '../../assets/styles/inputs.css';
 
 class RU extends Component {
   render(){
@@ -28,6 +29,10 @@ class RU extends Component {
             </div>
             <div className = "ru_inputs">
                 <input></input>
+                <input></input>
+                <input></input>
+                <button>Enter</button>
+
             </div>
           <Map2 />
         </Fragment>
