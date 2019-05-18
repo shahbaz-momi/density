@@ -1,6 +1,8 @@
 #include <vector>
 #include <cmath>
 
+#include <iostream>
+
 #include <algorithm>
 
 #ifndef CIRCLE_INTERSECTION_CPP
@@ -13,15 +15,12 @@ using namespace std;
 typedef struct {
     double x;
     double y;
-
-    int parentIndex[2];
 } Point;
 
 typedef struct {
     double radius;
     double x;
     double y;
-    int order;
 } Circle;
 
 typedef struct {
@@ -36,6 +35,7 @@ class CircleIntersection {
 
 public:
     static Rectangle getBoundingRect(Circle *circles, int len);
+    static Rectangle getBoundingRect(Circle *circles[], int len);
 
     static Point *circleCircleIntersection(Circle p1, Circle p2);
 
@@ -47,7 +47,7 @@ public:
 
     static double distance(Point p1, Point p2);
 
-    static vector<Point> *getIntersectionPoints(Circle *circles, int len);
+    static vector<Point*> *getIntersectionPoints(Circle *circles, int len);
 
 };
 
@@ -67,21 +67,24 @@ bool CircleIntersection::containedInCircles(Point p, Circle *circles, int num) {
 /**
  *  HEAP ALLOCS: vector, points in the vector are on the heap.
  */
-vector<Point> *CircleIntersection::getIntersectionPoints(Circle *circle, int len) {
-    auto ret = new vector<Point>();
+vector<Point*>* CircleIntersection::getIntersectionPoints(Circle* circle, int len) {
+    auto ret = new vector<Point*>();
 
     for (int i = 0; i < len; ++i) {
         for (int j = i + 1; j < len; ++j) {
-            Point *intersect = circleCircleIntersection(circle[i], circle[j]);
+            Point* intersect = circleCircleIntersection(circle[i], circle[j]);
 
             if (intersect != nullptr) {
-                for (int k = 0; k < 2; ++k) {
-                    Point p = intersect[k];
-                    p.parentIndex[0] = i;
-                    p.parentIndex[1] = j;
+                auto p0 = new Point();
+                auto p1 = new Point();
 
-                    ret->push_back(p);
-                }
+                p0->x = intersect[0].x; p0->y = intersect[0].y;
+                p1->x = intersect[1].x; p1->y = intersect[1].y;
+
+                delete intersect;
+
+                ret->push_back(p0);
+                ret->push_back(p1);
             }
         }
     }
@@ -141,14 +144,24 @@ Point *CircleIntersection::circleCircleIntersection(Circle p1, Circle p2) {
     return out;
 };
 
+Rectangle CircleIntersection::getBoundingRect(Circle* circles[], int len) {
+    auto temp = new Circle[len];
+    for(int i = 0; i < len; i ++) {
+        temp[i] = *circles[i];
+    }
+
+    Rectangle r = getBoundingRect(temp, len);
+    delete[] temp;
+    return r;
+}
 
 Rectangle CircleIntersection::getBoundingRect(Circle* circles, int len) {
     auto intersectionPoints = getIntersectionPoints(circles, len);
     auto filtered = new vector<Point>();
 
     for (int i = 0; i < intersectionPoints->size(); i++) {
-        if (containedInCircles(intersectionPoints->at(i), circles, len)) {
-            filtered->push_back(intersectionPoints->at(i));
+        if (containedInCircles(*intersectionPoints->at(i), circles, len)) {
+            filtered->push_back(*intersectionPoints->at(i));
         }
     }
 
@@ -188,17 +201,21 @@ Rectangle CircleIntersection::getBoundingRect(Circle* circles, int len) {
         }
     }
 
-//    // delete intersection points
-//    for(int i = 0; i < intersectionPoints->size(); i ++) {
-//        delete &intersectionPoints->at(i);
-//    }
-//    delete intersectionPoints;
-//
-//    // filtered points were from intersection points
-//    // just delete obj
-//    delete filtered;
+    unsigned long size = intersectionPoints->size();
 
-    return {x1, y1, x2 - x1, y2 - y1};
+    // delete intersection points
+    for(int i = 0; i < size; i ++) {
+        delete (*intersectionPoints)[i];
+    }
+
+    delete intersectionPoints;
+
+    // filtered points were from intersection points
+    // just delete obj
+    delete filtered;
+
+    Rectangle out = {x1, y1, x2 - x1, y2 - y1};
+    return out;
 };
 
 #endif
