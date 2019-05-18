@@ -4,5 +4,7 @@ class Device {
         this.xCoordinate = xCoordinate;
         this.yCoordinate = yCoordinate;
         this.time = time;
+        // this.elapsedTime = Date.now() - time;
     }
 }
+module.exports = Device;

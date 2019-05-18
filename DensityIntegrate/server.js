@@ -1,5 +1,7 @@
 // imports
 const net = require('net');
+const ws = require('ws')
+const Device = require('./device.js');
 
 // config
 const PORT = "9000";
@@ -7,6 +9,7 @@ const HOST = 'localhost';
 
 // server instance
 const server = net.createServer();
+const webSocketServer = ws.Server;
 
 // when a client connects
 server.on("connection", function(socket){
@@ -18,6 +21,12 @@ server.on("connection", function(socket){
     // when the client sends data
     socket.on("data", function(data){
         console.log("Data from %s: %s", remoteAddress, data);
+
+
+
+
+
+
     });
 
     // when the connection to the client closes 
