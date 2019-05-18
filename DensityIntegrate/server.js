@@ -1,15 +1,25 @@
 // imports
 const net = require('net');
-const ws = require('ws')
+const ws = require('ws').Server
 const Device = require('./device.js');
+const _ = require('lodash');
+const wsList = [];
 
 // config
-const PORT = "9000";
+const TCP_PORT = 9000;
+const WS_PORT = 3000;
 const HOST = 'localhost';
 
 // server instance
 const server = net.createServer();
-const webSocketServer = ws.Server;
+const webSocketServer = new ws({port: WS_PORT});
+
+webSocketServer.on("connection", function(ws){
+    wsList.push(ws);
+    ws.on('close', function close() {
+        console.log('Disconnected');
+    });
+});
 
 // when a client connects
 server.on("connection", function(socket){
@@ -22,10 +32,11 @@ server.on("connection", function(socket){
     socket.on("data", function(data){
         console.log("Data from %s: %s", remoteAddress, data);
 
-
-
-
-
+        for(let webSocket of wsList){
+            if(webSocket != null) {
+                webSocket.send(String(data));
+            }
+        }
 
     });
 
@@ -46,6 +57,8 @@ server.on("error", function(){
 });
 
 // server starts listening on specified port
-server.listen(9000, function(){
+server.listen(TCP_PORT, function(){
     console.log("Server listening to %j", server.address().port);
 });
+
+
