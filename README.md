@@ -1,2 +1,1 @@
-# density
-Density project for RU hacks
+# esp8266-simple-sniffer
