@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ReactHeatmap from './ReactHeatmap';
 import { w3cwebsocket as W3CWebSocket } from "websocket";
+import '../../assets/styles/map.css';
 
 const client = new W3CWebSocket('ws://127.0.0.1:8000');
 
@@ -10,9 +11,15 @@ class Map2 extends Component {
         y: 0
     }
 
-  componentWillMount() {
+  componentDidMount(){
     client.onopen = () => {
       console.log('WebSocket Client Connected');
+    };
+  }
+
+  componentWillMount() {
+    client.onopen = () => {
+      console.log('WebSocket Reopened');
     };
     client.onmessage = (message) => {
        let data = JSON.parse(message.data)
@@ -38,7 +45,9 @@ class Map2 extends Component {
         ]
       };
       return (
-        <ReactHeatmap data = {data} />
+        <div className = "map_container">
+          <ReactHeatmap data = {data} />
+        </div>
       );
     }
   }
