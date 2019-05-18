@@ -49,6 +49,7 @@ public:
 
     static vector<Point*> *getIntersectionPoints(Circle *circles, int len);
 
+    static void cleanIntersectionPoints(vector<Point*>* vec);
 };
 
 /**
@@ -165,10 +166,10 @@ Rectangle CircleIntersection::getBoundingRect(Circle* circles, int len) {
         }
     }
 
-    double x1 = numeric_limits<double>::max();
-    double y1 = numeric_limits<double>::max();
-    double x2 = numeric_limits<double>::min();
-    double y2 = numeric_limits<double>::min();
+    double x1 = 10000000000;
+    double y1 = 10000000000;
+    double x2 = -10000000000;
+    double y2 = -10000000000;
 
     for(const auto & point : *filtered) {
         if(point.x < x1)
@@ -216,6 +217,14 @@ Rectangle CircleIntersection::getBoundingRect(Circle* circles, int len) {
 
     Rectangle out = {x1, y1, x2 - x1, y2 - y1};
     return out;
+}
+
+void CircleIntersection::cleanIntersectionPoints(vector<Point *> *vec) {
+    // delete inside points
+    for(auto p : *vec) {
+        delete p;
+    }
+    delete vec;
 };
 
 #endif
