@@ -1,0 +1,40 @@
+p span{
+    background: -webkit-linear-gradient(#63b6d9, #39679f);
+  -webkit-background-clip: text;
+  font-family: 'Open Sans', sans-serif;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+}
+
+.try_text p {
+    font-size: 1.2rem;
+    font-family: 'Open Sans', sans-serif;
+    color: grey;
+}
+
+.try_text{
+    margin-top: 2.5rem;
+    text-align: center;
+}
+
+.try_icon{
+    width: 7rem;
+}
+
+.try_container{
+    text-align: center;
+    display: inline-block;
+    padding: 1rem;
+}
+
+.try_container p{
+    text-align: center;
+    font-size: 1.2rem;
+    font-family: 'Open Sans', sans-serif;
+    color: grey;
+    margin: 2rem;
+}
+
+.try_icons{
+    text-align: center;
+}

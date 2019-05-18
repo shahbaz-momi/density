@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import Logo from './Logo';
 import Nav from './Nav';
+import Try from './Try';
 
 class Home extends Component {
   render(){
@@ -8,6 +9,7 @@ class Home extends Component {
         <Fragment>
           <Logo />
           <Nav />
+          <Try />
         </Fragment>
       );
     }

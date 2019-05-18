@@ -7,10 +7,18 @@ class Logo extends Component {
       return (
         <div className = "nav_container">
             <hr />
-                About
-                Stack
-                Docs
-                Team
+              <p>
+                ABOUT
+              </p>
+              <p>
+                STACK
+              </p>
+              <p>
+                TEAM
+              </p>
+              <p>
+                MORE
+              </p>
             <hr />
         </div>
       );
