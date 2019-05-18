@@ -1,0 +1,80 @@
+p span{
+    background: -webkit-linear-gradient(#63b6d9, #39679f);
+  -webkit-background-clip: text;
+  font-family: 'Open Sans', sans-serif;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+}
+
+.try_text p {
+    font-size: 1.2rem;
+    font-family: 'Open Sans', sans-serif;
+    color: grey;
+}
+
+.try_text{
+    margin-top: 2.5rem;
+    text-align: center;
+}
+
+.try_icon{
+    width: 7rem;
+    margin: 0;
+}
+
+.try_container{
+    text-align: center;
+    display: inline-block;
+    padding: 1rem;
+    transition: all 0.25s ease;
+}
+
+.try_container:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.try_container p{
+    text-align: center;
+    font-size: 1.2rem;
+    font-family: 'Open Sans', sans-serif;
+    color: grey;
+    margin: 2rem;
+}
+
+.try_icons{
+    text-align: center;
+}
+
+
+.ru_hacks_text{
+    background: -webkit-linear-gradient(#3095FF, #024C9A);
+    -webkit-background-clip: text;
+    font-family: 'Open Sans', sans-serif;
+    -webkit-text-fill-color: transparent;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.library_text{
+    background: -webkit-linear-gradient(#EC2F2F, #AF0E0E);
+    -webkit-background-clip: text;
+    font-family: 'Open Sans', sans-serif;
+    -webkit-text-fill-color: transparent;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.street_text{
+    background: -webkit-linear-gradient(#B4EC51, #429321);
+    -webkit-background-clip: text;
+    font-family: 'Open Sans', sans-serif;
+    -webkit-text-fill-color: transparent;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.unactive {
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+}

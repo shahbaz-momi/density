@@ -1,0 +1,15 @@
+.map_container{
+    background-image: url(../images/ru_map.jpg);
+    border-radius: 20px;
+    border: solid white 15px;
+    box-shadow: 0 0 25px grey;
+
+    text-align: center;
+    padding: 3rem;
+    margin: 10rem;
+}
+
+#heatmapContainer {
+    height: 445px;
+    width: 840px;
+}

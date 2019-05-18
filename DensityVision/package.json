@@ -11,6 +11,7 @@
     "express": "^4.16.4",
     "google-map-react": "^1.1.4",
     "heatmap.js": "^2.0.5",
+    "react-router-dom": "^5.0.0",
     "websocket": "^1.0.28",
     "ws": "^7.0.0"
   },

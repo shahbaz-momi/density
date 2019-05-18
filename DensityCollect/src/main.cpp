@@ -41,9 +41,11 @@ wifi_promiscuous_pkt_type_t packet_type_parser(uint16_t len)
     }
 }
 
+// In this example, the packet handler function does all the parsing and output work.
+// This is NOT ideal.
 void wifi_sniffer_packet_handler(uint8_t *buff, uint16_t len)
 {
-// First layer: type cast the received buffer into our generic SDK structure
+    // First layer: type cast the received buffer into our generic SDK structure
     const wifi_promiscuous_pkt_t *ppkt = (wifi_promiscuous_pkt_t *)buff;
     // Second layer: define pointer to where the actual 802.11 packet is within the structure
     const wifi_ieee80211_packet_t *ipkt = (wifi_ieee80211_packet_t *)ppkt->payload;
@@ -119,16 +121,59 @@ void wifi_sniffer_packet_handler(uint8_t *buff, uint16_t len)
 }
 
 void dump_serial() {
+// report like so:
+// START FRAME MARKER:
+// CHANNEL <channel>
+// REPORT <report>
+// END FRAME MARKER
+    Serial.print(FRAME_START);
 
+    Serial.print(channel);
+    Serial.print(SECTION_DIVIDER);
+
+    auto entries = cache.get_entries();
+
+    for(int i = 0; i < DEVICE_CAPACITY; i ++) {
+        if(entries[i].state == ALIVE) {
+            // output it
+            char addr[] = "00:00:00:00:00:00\0";
+            mac2str(entries[i].m.mac, addr);
+
+            Serial.print(addr);
+            Serial.print(SEGMENT_DIVIDER);
+            for(int j = 0; j < SAMPLE_CAPACITY; j ++) {
+                auto num = entries[i].m.samples[j];
+                if(num != 0) {
+                    Serial.print(num);
+                    Serial.print(SEGMENT_DIVIDER);
+                }
+            }
+            Serial.print(entries[i].m.num_occurrences);
+            Serial.print(SECTION_DIVIDER);
+        }
     }
 
-Serial.print(FRAME_END);
+    Serial.print(FRAME_END);
 }
 
 void setup()
 {
+    // Serial setup
+    Serial.begin(921600);
+    delay(10);
+    wifi_set_channel(channel);
 
+    // Wifi setup
+    wifi_set_opmode(STATION_MODE);
+    wifi_promiscuous_enable(0);
+    WiFi.disconnect();
+
+    // Set sniffer callback
+    wifi_set_promiscuous_rx_cb(wifi_sniffer_packet_handler);
+    wifi_promiscuous_enable(1);
 }
+
+unsigned long last_exec_time = 0;
 
 void loop()
 {

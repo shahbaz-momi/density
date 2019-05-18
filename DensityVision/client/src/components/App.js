@@ -1,12 +1,18 @@
 import React, { Component, Fragment } from 'react';
-import Map2 from './Map2';
+import { HashRouter, Route } from 'react-router-dom';
+import RU from './ru/RU';
 import Home from './home/Home';
+import Header from './common/Header'
 class App extends Component {
   render(){
       return (
         <Fragment>
-          <Home />
-          <Map2 />
+          <HashRouter >
+            <div>
+              <Route path="/" exact component = {Home}/>
+              <Route path="/ruhacks" exact component = {RU}/>
+            </div>
+          </HashRouter>
         </Fragment>
       );
     }
