@@ -157,7 +157,19 @@ Serial.print(FRAME_END);
 
 void setup()
 {
+// Serial setup
+    Serial.begin(921600);
+    delay(10);
+    wifi_set_channel(channel);
 
+    // Wifi setup
+    wifi_set_opmode(STATION_MODE);
+    wifi_promiscuous_enable(0);
+    WiFi.disconnect();
+
+    // Set sniffer callback
+    wifi_set_promiscuous_rx_cb(wifi_sniffer_packet_handler);
+    wifi_promiscuous_enable(1);
 }
 
 void loop()
