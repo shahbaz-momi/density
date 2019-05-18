@@ -2,7 +2,6 @@
 const net = require('net');
 const ws = require('ws').Server
 const Device = require('./device.js');
-const _ = require('lodash');
 const wsList = [];
 
 // config
@@ -34,7 +33,14 @@ server.on("connection", function(socket){
 
         for(let webSocket of wsList){
             if(webSocket != null) {
-                webSocket.send(String(data));
+                var input = String(data).split(",");
+                var deviceID  = input[0];
+                var xCoordinate = input[1];
+                var yCoordinate = input[2];
+                var time = input[3];
+                var myDevice = new Device(deviceID, xCoordinate, yCoordinate, time);
+                var myJSON = JSON.stringify(myDevice);
+                webSocket.send(myJSON);
             }
         }
 
