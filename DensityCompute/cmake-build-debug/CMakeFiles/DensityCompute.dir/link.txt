@@ -1,1 +1,1 @@
-/usr/bin/c++   -g   CMakeFiles/DensityCompute.dir/src/main.cpp.o  -o DensityCompute 
+/usr/bin/c++   -g   CMakeFiles/DensityCompute.dir/src/main.cpp.o CMakeFiles/DensityCompute.dir/src/rssi_estimation1.cpp.o  -o DensityCompute 

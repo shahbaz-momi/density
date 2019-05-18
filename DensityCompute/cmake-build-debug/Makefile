@@ -150,6 +150,33 @@ src/main.cpp.s:
 	$(MAKE) -f CMakeFiles/DensityCompute.dir/build.make CMakeFiles/DensityCompute.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/rssi_estimation1.o: src/rssi_estimation1.cpp.o
+
+.PHONY : src/rssi_estimation1.o
+
+# target to build an object file
+src/rssi_estimation1.cpp.o:
+	$(MAKE) -f CMakeFiles/DensityCompute.dir/build.make CMakeFiles/DensityCompute.dir/src/rssi_estimation1.cpp.o
+.PHONY : src/rssi_estimation1.cpp.o
+
+src/rssi_estimation1.i: src/rssi_estimation1.cpp.i
+
+.PHONY : src/rssi_estimation1.i
+
+# target to preprocess a source file
+src/rssi_estimation1.cpp.i:
+	$(MAKE) -f CMakeFiles/DensityCompute.dir/build.make CMakeFiles/DensityCompute.dir/src/rssi_estimation1.cpp.i
+.PHONY : src/rssi_estimation1.cpp.i
+
+src/rssi_estimation1.s: src/rssi_estimation1.cpp.s
+
+.PHONY : src/rssi_estimation1.s
+
+# target to generate assembly for a file
+src/rssi_estimation1.cpp.s:
+	$(MAKE) -f CMakeFiles/DensityCompute.dir/build.make CMakeFiles/DensityCompute.dir/src/rssi_estimation1.cpp.s
+.PHONY : src/rssi_estimation1.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -162,6 +189,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/rssi_estimation1.o"
+	@echo "... src/rssi_estimation1.i"
+	@echo "... src/rssi_estimation1.s"
 .PHONY : help
 
 

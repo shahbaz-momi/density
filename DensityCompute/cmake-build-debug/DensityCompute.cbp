@@ -87,6 +87,9 @@
       <Unit filename="/tmp/tmp.6FcLBRes3i/src/main.cpp">
          <Option target="DensityCompute"/>
       </Unit>
+      <Unit filename="/tmp/tmp.6FcLBRes3i/src/rssi_estimation1.cpp">
+         <Option target="DensityCompute"/>
+      </Unit>
       <Unit filename="/tmp/tmp.6FcLBRes3i/CMakeLists.txt">
           <Option virtualFolder="CMake Files\" />
       </Unit>
