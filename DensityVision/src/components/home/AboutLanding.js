@@ -18,7 +18,9 @@ class AboutLanding extends Component {
                 <img className = "about_text" src={about_text} alt = "about_text" />
                 <hr />
                 <p className = "muted">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                The Density API is a population tracker that predicts population heatmaps in confined areas using hardware to detect wifi packets, plotting population
+                density, retention rate and more to provide invaluable information to individual users and agencies looking to optimize connected customer experience. 
+
                 </p>
                 <button className="btn">Learn More</button>
                </div>

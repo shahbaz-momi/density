@@ -1,17 +1,18 @@
 import React, { Component, Fragment } from 'react';
-import Map2 from './Map2';
+import Map3 from './Map3';
 import {Link} from 'react-router-dom';
 import '../../assets/styles/try.css';
 import ru_logo from '../../assets/images/ru_logo.svg';
 import library from '../../assets/images/library.svg';
 import streets from '../../assets/images/streets.svg';
 import '../../assets/styles/inputs.css';
-class RU extends Component {
+
+class Street extends Component {
   render(){
       return (
         <Fragment>
          <div className = "try_icons">
-                <div className = "try_container">
+                <div className = "try_container unactive">
                     <Link to = "/ruhacks">
                         <img className = "try_icon" src = {ru_logo} alt = "ru_logo"/>
                         <p className = "ru_hacks_text">RU HACKS</p>
@@ -21,7 +22,7 @@ class RU extends Component {
                     <img className = "try_icon" src = {library} alt = "library"/>
                     <p className = "library_text">LIBRARY</p>
                 </div>
-                <div className = "try_container unactive">
+                <div className = "try_container ">
                     <img className = "try_icon" src = {streets} alt = "street"/>
                     <p className = "street_text">YONGE STREET</p>
                 </div>
@@ -29,8 +30,6 @@ class RU extends Component {
             <div className = "search_settings">
               <h4>Search Settings</h4>
             </div>
-
-    
 
             <div className = "ru_inputs">
                 <i className="fas fa-lg fa-layer-group"></i>
@@ -45,9 +44,9 @@ class RU extends Component {
                 <button>ENTER</button>
 
             </div>
-          <Map2 />
+          <Map3 />
         </Fragment>
       );
     }
   }
-export default RU;
+export default Street;

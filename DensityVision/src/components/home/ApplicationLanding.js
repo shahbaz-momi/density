@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import applications_landing from  '../../assets/images/applications_landing.svg';
-import about_text from  '../../assets/images/about_text.png';
+import apps_text from  '../../assets/images/apps_text.png';
 import '../../assets/styles/home.css';
 
 class ApplicationLanding extends Component {
@@ -15,10 +15,11 @@ class ApplicationLanding extends Component {
              <div className = "col-6">
                <div className = "intro_text">
                <p className = "muted"> DENSITY COMMERCIAL APPLICATIONS</p>
-                <img className = "about_text" src={about_text} alt = "about_text" />
+                <img className = "apps_text" src={apps_text} alt = "apps_text" />
                 <hr />
                 <p className = "muted">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                The Density API is intentfully diverse and versatile: to users it deduces traffic of common places such as libraries or malls, keeping us connected to our communities, 
+                and to organizations an invaluable tool to track location popularity, customer movement patterns and enhance the connected customer experience.
                 </p>
                 <button className="btn">Learn More</button>
                </div>

@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react';
 import home_landing from  '../../assets/images/home_landing.svg';
 import density_text from  '../../assets/images/density_text.png';
 import '../../assets/styles/home.css';
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 class HomeLanding extends Component {
   render(){
@@ -15,9 +16,11 @@ class HomeLanding extends Component {
                 <img src = {density_text} alt = "density_text"></img>
                 <hr />
                 <p className = "muted">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                The multi-purpose population tracking and analysis API for individuals and organizations looking to innovate in their attempts to improve productivity, make effective choices and stay connected to the world.
                 </p>
+                <AnchorLink href='#demo'>
                 <button className="btn">Live Demo</button>
+                  </AnchorLink>
                </div>
 
               </div>

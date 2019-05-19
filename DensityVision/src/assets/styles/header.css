@@ -94,4 +94,5 @@ a:hover{
     color: grey;
     text-decoration: none;
     opacity: 0.6;
+    cursor: pointer;
 }
