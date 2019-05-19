@@ -41,9 +41,9 @@ class Map3 extends Component {
             <div className = "map_title"><i class="fas fa-map-marker-alt"></i> &nbsp; SEARS ATRIUM</div>
             <div className = "map_legend">
               TOTAL POPULATION
-              <div className = "stat"><i className="fas fa-users"></i> 28 000</div>
+              <div className = "stat"><i className="fas fa-users"></i>1</div>
               POPULATION DENSITY
-              <div className = "stat"><i className="fas fa-vector-square"></i> 12</div>
+              <div className = "stat"><i className="fas fa-vector-square"></i> 0.8/m</div>
               RETENTION RATE
               <div className = "stat"><i className="fas fa-signal"></i> 89%</div>
               <p className = "details">FOR MORE DETAILS SCROLL DOWN</p>

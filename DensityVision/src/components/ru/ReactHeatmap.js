@@ -5,19 +5,19 @@ import '../../assets/styles/map.css';
 class ReactHeatmap extends Component {
   componentDidMount(){
     const config = {
-      container: document.getElementById('heatmapContainer'),
+      container: document.getElementById('fakeHeatMap'),
       maxOpacity: .5,
       minOpacity: 0,
       blur: .75,
       backgroundColor: 'rgba(255, 0, 0, 0)'
     };
     this.heatmapInstance = h337.create(config);
-    this.heatmapInstance.setData(this.props.data)
-    console.log(this.heatmapInstance.getData())
+    this.heatmapInstance.setData(this.props.data);
+    console.log(this.heatmapInstance.getData());
   } 
   componentDidUpdate(){
     if (this.heatmapInstance){
-      this.heatmapInstance.addData(this.props.data.data)
+      this.heatmapInstance.setData(this.props.data)
       console.log(this.heatmapInstance.getData())
     }
   }
@@ -27,7 +27,7 @@ class ReactHeatmap extends Component {
       width: '850px',
     }
     return (
-      <div style = {divStyle} id = "heatmapContainer"></div>
+      <div style = {divStyle} id = "fakeHeatMap"></div>
     );
   }
 }

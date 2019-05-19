@@ -12,12 +12,12 @@ class ReactHeatmap3 extends Component {
       backgroundColor: 'rgba(255, 0, 0, 0)'
     };
     this.heatmapInstance = h337.create(config);
-    this.heatmapInstance.setData(this.props.data)
+    this.heatmapInstance.setData(this.props.data.data)
     console.log(this.heatmapInstance.getData())
   } 
   componentDidUpdate(){
     if (this.heatmapInstance){
-      this.heatmapInstance.setData(this.props.data)
+      this.heatmapInstance.addData(this.props.data.data)
       console.log(this.heatmapInstance.getData())
     }
   }

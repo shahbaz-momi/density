@@ -25,12 +25,20 @@ class Try extends Component {
                     </Link>
                 </div>
                 <div className = "try_container">
+                <Link to = "/library">
+
                     <img className = "try_icon" src = {library} alt = "library"/>
                     <p className = "library_text">LIBRARY</p>
+                    </Link>
+
                 </div>
                 <div className = "try_container">
+                <Link to = "/street">
+
                     <img className = "try_icon" src = {streets} alt = "street"/>
                     <p className = "street_text">YONGE STREET</p>
+                    </Link>
+
                 </div>
                 <br/>
             <img className = "demo_landing" src={demo_landing} alt = "demo_landing" />

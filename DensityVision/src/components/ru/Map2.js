@@ -4,11 +4,12 @@ import Stats from './Stats';
 import { w3cwebsocket as W3CWebSocket } from "websocket";
 import '../../assets/styles/map.css';
 
-const client = new W3CWebSocket('ws://127.0.0.1:4000');
+const client = new W3CWebSocket('ws://127.0.0.1:4100');
 
 class Map2 extends Component {
     state = {
-       coord: [null, null]
+       x: null,
+       y: null
     }
 
   componentDidMount(){
@@ -24,7 +25,7 @@ class Map2 extends Component {
     client.onmessage = (message) => {
        let data = JSON.parse(message.data)
        console.log(data);
-       this.setState({x : data.xCoordinate, y : data.yCoordinate});
+       this.setState({x : data.x, y : data.y});
     };
   }
     
@@ -33,10 +34,10 @@ class Map2 extends Component {
       var dataPoint = { 
         x: x*100, 
         y: y*100, 
-        radius: 30,
-        value: 10 
+        radius: 50,
+        value: 50 
       };
-      var data = {
+      var dataset = {
         max: 100,
         min: 0,
         data: [
@@ -49,11 +50,11 @@ class Map2 extends Component {
             <div className = "map_title"><i class="fas fa-map-marker-alt"></i> &nbsp; SEARS ATRIUM</div>
             <div className = "map_legend">
               TOTAL POPULATION
-              <div className = "stat"><i className="fas fa-users"></i> 28 000</div>
+              <div className = "stat"><i className="fas fa-users"></i> 1 </div>
               POPULATION DENSITY
-              <div className = "stat"><i className="fas fa-vector-square"></i> 12</div>
+              <div className = "stat"><i className="fas fa-vector-square"></i> 0.6/m</div>
               RETENTION RATE
-              <div className = "stat"><i className="fas fa-signal"></i> 89%</div>
+              <div className = "stat"><i className="fas fa-signal"></i> 100%</div>
               <p className = "details">FOR MORE DETAILS SCROLL DOWN</p>
               <div className="map_icons">
                 <i className="fas fa-map-pin"></i>
@@ -63,7 +64,7 @@ class Map2 extends Component {
                 <i className="fas fa-cog"></i>
               </div>
             </div>
-            <ReactHeatmap data = {data} />
+            <ReactHeatmap data = {dataset} />
           </div>
           <Stats />
         

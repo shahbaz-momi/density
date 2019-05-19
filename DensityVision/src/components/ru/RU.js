@@ -11,34 +11,39 @@ class RU extends Component {
       return (
         <Fragment>
          <div className = "try_icons">
-                <div className = "try_container">
+              <div className = "try_container ">
                     <Link to = "/ruhacks">
                         <img className = "try_icon" src = {ru_logo} alt = "ru_logo"/>
                         <p className = "ru_hacks_text">RU HACKS</p>
                     </Link>
                 </div>
                 <div className = "try_container unactive">
+                <Link to = "/library">
                     <img className = "try_icon" src = {library} alt = "library"/>
                     <p className = "library_text">LIBRARY</p>
+                    </Link>
+
                 </div>
                 <div className = "try_container unactive">
+                <Link to = "/street">
                     <img className = "try_icon" src = {streets} alt = "street"/>
                     <p className = "street_text">YONGE STREET</p>
+                    </Link>
+
                 </div>
             </div>
             <div className = "search_settings">
               <h4>Search Settings</h4>
             </div>
-
     
 
             <div className = "ru_inputs">
                 <i className="fas fa-lg fa-layer-group"></i>
-                <input className = "input_text" type="text" placeholder="SEARS ATRIUM"></input>
+                <input className = "input_text" type="text" placeholder="RU FLOOR 4"></input>
                 <i className="fas  fa-lg  fa-history"></i>
-                <input className = "input_text" type="text" placeholder="2:00PM"></input>
+                <input className = "input_text" type="text" placeholder="7:00AM"></input>
                 <i className="fas  fa-lg  fa-calendar-alt"></i>
-                <input className = "input_text" type="text" placeholder="MAY 17, 2019"></input>
+                <input className = "input_text" type="text" placeholder="MAY 19, 2019"></input>
                 <i className="fas  fa-lg  fa-power-off"></i>
                 <input className = "input_text" type="text" placeholder="LIVE"></input>
                 <br />
