@@ -23,10 +23,10 @@ typedef struct {
 } Device;
 
 Point node_locations[5] = {
-        {3.9624, 0},
+        {3.048, 0},
         {0, 0},
         {0, 0},
-        {0, 5.08},
+        {0, 3.9624},
         {0, 0}
 };
 
@@ -129,8 +129,8 @@ void process1() {
 
     cout << *output << endl;
 
-//    if(!output->empty())
-//        node_sock.socket_send(output->c_str(), output->size());
+    if(!output->empty())
+        node_sock.socket_send(output->c_str(), output->size());
 
     delete output;
 }
@@ -171,36 +171,39 @@ void process0(string & in) {
 
         auto mac = new string(*sub->at(0));
 
-        if(devices.count(*mac)) {
-            // already exists, update the distance at this node
-            auto devp = devices[*mac];
-            cout << avg_rssi << " " << devp->dists[node_i] << " " << dist << endl;
-            // if the distance is too much from from the previous one,
-            // then fuck it and drop it
-            const auto delta = abs(devp->dists[node_i] - dist);
+        if((*mac) == "64:a2:f9:bd:11:25") {
+            cout << "got proper mac" << endl;
+            if (devices.count(*mac)) {
+                // already exists, update the distance at this node
+                auto devp = devices[*mac];
+                cout << avg_rssi << " " << devp->dists[node_i] << " " << dist << endl;
+                // if the distance is too much from from the previous one,
+                // then fuck it and drop it
+                const auto delta = abs(devp->dists[node_i] - dist);
 
-            if(delta <= DISTANCE_DELTA_TOLERANCE) {
-                devp->dists[node_i] = devp->dists[node_i] * 0.5 + dist * 0.5;
-                devp->time = now;
+                if (delta <= DISTANCE_DELTA_TOLERANCE) {
+                    devp->dists[node_i] = devp->dists[node_i] * 0.5 + dist * 0.5;
+                    devp->time = now;
+                }
+
+                delete mac;
+            } else {
+                // put a new device object
+                auto dev = new Device;
+                dev->dists[0] = 0.0;
+                dev->dists[1] = 0.0;
+                dev->dists[2] = 0.0;
+                dev->dists[3] = 0.0;
+                dev->dists[4] = 0.0;
+
+                dev->dists[node_i] = dist;
+                dev->time = now;
+
+                cout << avg_rssi << " " << dist << endl;
+
+                devices[*mac] = dev;
+                // dont delete mac cause we need it now
             }
-
-            delete mac;
-        } else {
-            // put a new device object
-            auto dev = new Device;
-            dev->dists[0] = 0.0;
-            dev->dists[1] = 0.0;
-            dev->dists[2] = 0.0;
-            dev->dists[3] = 0.0;
-            dev->dists[4] = 0.0;
-
-            dev->dists[node_i] = dist;
-            dev->time = now;
-
-            cout << avg_rssi << " " << dist << endl;
-
-            devices[*mac] = dev;
-            // dont delete mac cause we need it now
         }
 
         delete sub;
@@ -259,7 +262,7 @@ int main() {
     // create the socket to node
     node_sock.socket_connect();
 
-    char* com_port = "\\\\.\\COM5";
+    char* com_port = "\\\\.\\COM3";
 
     // TODO: init serial reading
 

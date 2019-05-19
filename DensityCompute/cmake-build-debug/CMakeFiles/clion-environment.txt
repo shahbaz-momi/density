@@ -1,3 +1,4 @@
-ToolSet: 0.1 (remote)Options: 
+ToolSet: 16.0 (local)@C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional
+Options: msvc.arch=x86
 
 Options:

@@ -4,10 +4,12 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/tmp/tmp.6FcLBRes3i/src/main.cpp" "/tmp/tmp.6FcLBRes3i/cmake-build-debug/CMakeFiles/DensityCompute.dir/src/main.cpp.o"
-  "/tmp/tmp.6FcLBRes3i/src/rssi_estimation1.cpp" "/tmp/tmp.6FcLBRes3i/cmake-build-debug/CMakeFiles/DensityCompute.dir/src/rssi_estimation1.cpp.o"
+  "C:/Users/shahb/Documents/density/DensityCompute/src/SerialPort.cpp" "C:/Users/shahb/Documents/density/DensityCompute/cmake-build-debug/CMakeFiles/DensityCompute.dir/src/SerialPort.cpp.obj"
+  "C:/Users/shahb/Documents/density/DensityCompute/src/comms.cpp" "C:/Users/shahb/Documents/density/DensityCompute/cmake-build-debug/CMakeFiles/DensityCompute.dir/src/comms.cpp.obj"
+  "C:/Users/shahb/Documents/density/DensityCompute/src/main.cpp" "C:/Users/shahb/Documents/density/DensityCompute/cmake-build-debug/CMakeFiles/DensityCompute.dir/src/main.cpp.obj"
+  "C:/Users/shahb/Documents/density/DensityCompute/src/rssi_estimation3.cpp" "C:/Users/shahb/Documents/density/DensityCompute/cmake-build-debug/CMakeFiles/DensityCompute.dir/src/rssi_estimation3.cpp.obj"
   )
-set(CMAKE_CXX_COMPILER_ID "GNU")
+set(CMAKE_CXX_COMPILER_ID "MSVC")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
