@@ -29,13 +29,13 @@ typedef struct {
 
     double width;
     double height;
-} Rectangle;
+} Rectangle_t;
 
 class CircleIntersection {
 
 public:
-    static Rectangle getBoundingRect(Circle *circles, int len);
-    static Rectangle getBoundingRect(Circle *circles[], int len);
+    static Rectangle_t getBoundingRect(Circle *circles, int len);
+    static Rectangle_t getBoundingRect(Circle *circles[], int len);
 
     static Point *circleCircleIntersection(Circle p1, Circle p2);
 
@@ -145,18 +145,18 @@ Point *CircleIntersection::circleCircleIntersection(Circle p1, Circle p2) {
     return out;
 };
 
-Rectangle CircleIntersection::getBoundingRect(Circle* circles[], int len) {
+Rectangle_t CircleIntersection::getBoundingRect(Circle* circles[], int len) {
     auto temp = new Circle[len];
     for(int i = 0; i < len; i ++) {
         temp[i] = *circles[i];
     }
 
-    Rectangle r = getBoundingRect(temp, len);
+    Rectangle_t r = getBoundingRect(temp, len);
     delete[] temp;
     return r;
 }
 
-Rectangle CircleIntersection::getBoundingRect(Circle* circles, int len) {
+Rectangle_t CircleIntersection::getBoundingRect(Circle* circles, int len) {
     auto intersectionPoints = getIntersectionPoints(circles, len);
     auto filtered = new vector<Point>();
 
@@ -215,7 +215,7 @@ Rectangle CircleIntersection::getBoundingRect(Circle* circles, int len) {
     // just delete obj
     delete filtered;
 
-    Rectangle out = {x1, y1, x2 - x1, y2 - y1};
+    Rectangle_t out = {x1, y1, x2 - x1, y2 - y1};
     return out;
 }
 

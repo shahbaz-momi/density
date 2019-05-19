@@ -1,6 +1,9 @@
 #include "rssi_estimation.hpp"
 #include "cmath"
 
-double RssiEstimation::rssi_to_distance(signed int rssi) {
-    return (pow(10.0, (rssi - 18.67) / (-47.37)));
+#define A -66
+#define n 1.84
+
+double RssiEstimation::rssi_to_distance(double rssi) {
+    return (pow(10.0, -(rssi - A) / (10 * n)));
 }

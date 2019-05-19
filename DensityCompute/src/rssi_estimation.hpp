@@ -3,7 +3,7 @@
 
 class RssiEstimation {
 public:
-    static double rssi_to_distance(signed int rssi);
+    static double rssi_to_distance(double rssi);
 };
 
 #endif //DENSITYCOMPUTE_RSSI_ESTIMATION_HPP

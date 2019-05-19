@@ -2,6 +2,10 @@
 #define IGNORE_CHANNEL 13
 #define MAX_CHANNEL 14
 
+#define DEFAULT_CHANNEL 1
+
+#define NODE_ID "4"
+
 #include <Arduino.h>
 #include <ESP8266WiFi.h>
 #include "sdk_structs.h"
@@ -18,7 +22,7 @@ extern "C"
 }
 
 MacCache cache;
-int channel = 1;
+int channel = DEFAULT_CHANNEL;
 
 // According to the SDK documentation, the packet type can be inferred from the
 // size of the buffer. We are ignoring this information and parsing the type-subtype
@@ -131,6 +135,10 @@ void dump_serial() {
     Serial.print(channel);
     Serial.print(SECTION_DIVIDER);
 
+    Serial.print(NODE_ID);
+    Serial.print(SECTION_DIVIDER);
+
+
     auto entries = cache.get_entries();
 
     for(int i = 0; i < DEVICE_CAPACITY; i ++) {
@@ -177,6 +185,14 @@ unsigned long last_exec_time = 0;
 
 void loop()
 {
+    if(Serial.available()) {
+        // reset channel and last_exec time
+        Serial.read();
+        
+        channel = DEFAULT_CHANNEL;
+        last_exec_time = millis();
+    }
+
     if(last_exec_time == 0) {
         last_exec_time = millis();
         return;

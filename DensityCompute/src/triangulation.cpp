@@ -15,9 +15,7 @@ public:
         const auto num_intr = intr->size();
         CircleIntersection::cleanIntersectionPoints(intr);
 
-        cout << num_intr << endl;
-
-        Rectangle temp;
+        Rectangle_t temp;
 
         if(num_intr == 6) {
             // ideal 3 circle intersection
@@ -64,13 +62,13 @@ public:
 
             CircleIntersection::cleanIntersectionPoints(intrs_01);
 
-            Rectangle ra;
-            Rectangle rb;
+            Rectangle_t ra;
+            Rectangle_t rb;
 
             temp = CircleIntersection::getBoundingRect(a, 2);
-            memcpy(&ra, &temp, sizeof(Rectangle));
+            memcpy(&ra, &temp, sizeof(Rectangle_t));
             temp = CircleIntersection::getBoundingRect(b, 2);
-            memcpy(&rb, &temp, sizeof(Rectangle));
+            memcpy(&rb, &temp, sizeof(Rectangle_t));
 
             out->x = ((ra.x + ra.width / 2) + (rb.x + rb.width / 2)) / 2;
             out->y = ((ra.y + ra.height / 2) + (rb.y + rb.height / 2)) / 2;
