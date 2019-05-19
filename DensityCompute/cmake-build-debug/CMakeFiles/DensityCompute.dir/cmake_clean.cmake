@@ -1,8 +1,12 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/DensityCompute.dir/src/main.cpp.o"
-  "CMakeFiles/DensityCompute.dir/src/rssi_estimation1.cpp.o"
+  "CMakeFiles/DensityCompute.dir/src/main.cpp.obj"
+  "CMakeFiles/DensityCompute.dir/src/SerialPort.cpp.obj"
+  "CMakeFiles/DensityCompute.dir/src/comms.cpp.obj"
+  "CMakeFiles/DensityCompute.dir/src/rssi_estimation3.cpp.obj"
   "DensityCompute.pdb"
-  "DensityCompute"
+  "DensityCompute.exe"
+  "DensityCompute.exe.manifest"
+  "DensityCompute.lib"
 )
 
 # Per-language clean rules from dependency scanning.

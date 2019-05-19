@@ -1,97 +1,107 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <CodeBlocks_project_file>
-   <FileVersion major="1" minor="6" />
-   <Project>
-      <Option title="DensityCompute" />
-      <Option makefile_is_custom="1" />
-      <Option compiler="gcc" />
-      <Option virtualFolders="CMake Files\;" />
-      <Build>
-      <Target title="all">
-         <Option working_dir="/tmp/tmp.6FcLBRes3i/cmake-build-debug" />
-         <Option type="4" />
-         <MakeCommands>
-            <Build command="/usr/bin/make -f &quot;/tmp/tmp.6FcLBRes3i/cmake-build-debug/Makefile&quot;  VERBOSE=1 all" />
-            <CompileFile command="/usr/bin/make -f &quot;/tmp/tmp.6FcLBRes3i/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
-            <Clean command="/usr/bin/make -f &quot;/tmp/tmp.6FcLBRes3i/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean" />
-            <DistClean command="/usr/bin/make -f &quot;/tmp/tmp.6FcLBRes3i/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean" />
-         </MakeCommands>
-      </Target>
-      <Target title="edit_cache">
-         <Option working_dir="/tmp/tmp.6FcLBRes3i/cmake-build-debug" />
-         <Option type="4" />
-         <MakeCommands>
-            <Build command="/usr/bin/make -f &quot;/tmp/tmp.6FcLBRes3i/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache" />
-            <CompileFile command="/usr/bin/make -f &quot;/tmp/tmp.6FcLBRes3i/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
-            <Clean command="/usr/bin/make -f &quot;/tmp/tmp.6FcLBRes3i/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean" />
-            <DistClean command="/usr/bin/make -f &quot;/tmp/tmp.6FcLBRes3i/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean" />
-         </MakeCommands>
-      </Target>
-      <Target title="rebuild_cache">
-         <Option working_dir="/tmp/tmp.6FcLBRes3i/cmake-build-debug" />
-         <Option type="4" />
-         <MakeCommands>
-            <Build command="/usr/bin/make -f &quot;/tmp/tmp.6FcLBRes3i/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache" />
-            <CompileFile command="/usr/bin/make -f &quot;/tmp/tmp.6FcLBRes3i/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
-            <Clean command="/usr/bin/make -f &quot;/tmp/tmp.6FcLBRes3i/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean" />
-            <DistClean command="/usr/bin/make -f &quot;/tmp/tmp.6FcLBRes3i/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean" />
-         </MakeCommands>
-      </Target>
-      <Target title="DensityCompute">
-         <Option output="/tmp/tmp.6FcLBRes3i/cmake-build-debug/DensityCompute" prefix_auto="0" extension_auto="0" />
-         <Option working_dir="/tmp/tmp.6FcLBRes3i/cmake-build-debug" />
-         <Option object_output="./" />
-         <Option type="1" />
-         <Option compiler="gcc" />
-         <Compiler>
-            <Add directory="/usr/include" />
-            <Add directory="/usr/include/c++/5" />
-            <Add directory="/usr/include/c++/5/backward" />
-            <Add directory="/usr/include/x86_64-linux-gnu" />
-            <Add directory="/usr/include/x86_64-linux-gnu/c++/5" />
-            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include" />
-            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed" />
-            <Add directory="/usr/local/include" />
-         </Compiler>
-         <MakeCommands>
-            <Build command="/usr/bin/make -f &quot;/tmp/tmp.6FcLBRes3i/cmake-build-debug/Makefile&quot;  VERBOSE=1 DensityCompute" />
-            <CompileFile command="/usr/bin/make -f &quot;/tmp/tmp.6FcLBRes3i/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
-            <Clean command="/usr/bin/make -f &quot;/tmp/tmp.6FcLBRes3i/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean" />
-            <DistClean command="/usr/bin/make -f &quot;/tmp/tmp.6FcLBRes3i/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean" />
-         </MakeCommands>
-      </Target>
-      <Target title="DensityCompute/fast">
-         <Option output="/tmp/tmp.6FcLBRes3i/cmake-build-debug/DensityCompute" prefix_auto="0" extension_auto="0" />
-         <Option working_dir="/tmp/tmp.6FcLBRes3i/cmake-build-debug" />
-         <Option object_output="./" />
-         <Option type="1" />
-         <Option compiler="gcc" />
-         <Compiler>
-            <Add directory="/usr/include" />
-            <Add directory="/usr/include/c++/5" />
-            <Add directory="/usr/include/c++/5/backward" />
-            <Add directory="/usr/include/x86_64-linux-gnu" />
-            <Add directory="/usr/include/x86_64-linux-gnu/c++/5" />
-            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include" />
-            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed" />
-            <Add directory="/usr/local/include" />
-         </Compiler>
-         <MakeCommands>
-            <Build command="/usr/bin/make -f &quot;/tmp/tmp.6FcLBRes3i/cmake-build-debug/Makefile&quot;  VERBOSE=1 DensityCompute/fast" />
-            <CompileFile command="/usr/bin/make -f &quot;/tmp/tmp.6FcLBRes3i/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
-            <Clean command="/usr/bin/make -f &quot;/tmp/tmp.6FcLBRes3i/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean" />
-            <DistClean command="/usr/bin/make -f &quot;/tmp/tmp.6FcLBRes3i/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean" />
-         </MakeCommands>
-      </Target>
-      </Build>
-      <Unit filename="/tmp/tmp.6FcLBRes3i/src/main.cpp">
-         <Option target="DensityCompute"/>
-      </Unit>
-      <Unit filename="/tmp/tmp.6FcLBRes3i/src/rssi_estimation1.cpp">
-         <Option target="DensityCompute"/>
-      </Unit>
-      <Unit filename="/tmp/tmp.6FcLBRes3i/CMakeLists.txt">
-          <Option virtualFolder="CMake Files\" />
-      </Unit>
-   </Project>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="DensityCompute"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="msvc8"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="C:/Users/shahb/Documents/density/DensityCompute/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\shahb\Documents\density\DensityCompute\cmake-build-debug\Makefile VERBOSE=1 all"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\shahb\Documents\density\DensityCompute\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\shahb\Documents\density\DensityCompute\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\shahb\Documents\density\DensityCompute\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="DensityCompute">
+				<Option output="C:/Users/shahb/Documents/density/DensityCompute/cmake-build-debug/DensityCompute.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/shahb/Documents/density/DensityCompute/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="msvc8"/>
+				<Compiler>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.20.27508\ATLMFC\include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.20.27508\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\ucrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\shared"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\winrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\cppwinrt"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\shahb\Documents\density\DensityCompute\cmake-build-debug\Makefile VERBOSE=1 DensityCompute"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\shahb\Documents\density\DensityCompute\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\shahb\Documents\density\DensityCompute\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\shahb\Documents\density\DensityCompute\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="DensityCompute/fast">
+				<Option output="C:/Users/shahb/Documents/density/DensityCompute/cmake-build-debug/DensityCompute.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/shahb/Documents/density/DensityCompute/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="msvc8"/>
+				<Compiler>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.20.27508\ATLMFC\include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.20.27508\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\ucrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\shared"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\winrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\cppwinrt"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\shahb\Documents\density\DensityCompute\cmake-build-debug\Makefile VERBOSE=1 DensityCompute/fast"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\shahb\Documents\density\DensityCompute\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\shahb\Documents\density\DensityCompute\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\shahb\Documents\density\DensityCompute\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="C:/Users/shahb/Documents/density/DensityCompute/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\shahb\Documents\density\DensityCompute\cmake-build-debug\Makefile VERBOSE=1 edit_cache"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\shahb\Documents\density\DensityCompute\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\shahb\Documents\density\DensityCompute\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\shahb\Documents\density\DensityCompute\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="C:/Users/shahb/Documents/density/DensityCompute/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\shahb\Documents\density\DensityCompute\cmake-build-debug\Makefile VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\shahb\Documents\density\DensityCompute\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\shahb\Documents\density\DensityCompute\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\shahb\Documents\density\DensityCompute\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="C:/Users/shahb/Documents/density/DensityCompute/src/SerialPort.cpp">
+			<Option target="DensityCompute"/>
+		</Unit>
+		<Unit filename="C:/Users/shahb/Documents/density/DensityCompute/src/SerialPort.h">
+			<Option target="DensityCompute"/>
+		</Unit>
+		<Unit filename="C:/Users/shahb/Documents/density/DensityCompute/src/comms.cpp">
+			<Option target="DensityCompute"/>
+		</Unit>
+		<Unit filename="C:/Users/shahb/Documents/density/DensityCompute/src/comms.hpp">
+			<Option target="DensityCompute"/>
+		</Unit>
+		<Unit filename="C:/Users/shahb/Documents/density/DensityCompute/src/main.cpp">
+			<Option target="DensityCompute"/>
+		</Unit>
+		<Unit filename="C:/Users/shahb/Documents/density/DensityCompute/src/rssi_estimation3.cpp">
+			<Option target="DensityCompute"/>
+		</Unit>
+		<Unit filename="C:/Users/shahb/Documents/density/DensityCompute/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
 </CodeBlocks_project_file>

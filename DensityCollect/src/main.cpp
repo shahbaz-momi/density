@@ -2,7 +2,7 @@
 #define IGNORE_CHANNEL 13
 #define MAX_CHANNEL 14
 
-#define DEFAULT_CHANNEL 1
+#define DEFAULT_CHANNEL 11
 
 #define NODE_ID "4"
 
@@ -169,7 +169,7 @@ void setup()
     // Serial setup
     Serial.begin(921600);
     delay(10);
-    wifi_set_channel(channel);
+    wifi_set_channel(8);
 
     // Wifi setup
     wifi_set_opmode(STATION_MODE);
@@ -200,19 +200,22 @@ void loop()
 
     if(millis() - last_exec_time >= CHANNEL_SWEEP_TIME) {
         wifi_promiscuous_enable(0);
-        if(++channel > MAX_CHANNEL) {
-            channel = 1;
-        }
-        if(channel == IGNORE_CHANNEL)
-            channel ++;
-        if(channel > MAX_CHANNEL) {
-            channel = 1;
-        }
+        // if(++channel > MAX_CHANNEL) {
+        //     channel = 1;
+        // }
+        // if(channel == IGNORE_CHANNEL)
+        //     channel ++;
+        // if(channel > MAX_CHANNEL) {
+        //     channel = 1;
+        // }
 
-        wifi_set_channel(channel);
+        // wifi_set_channel(channel);
 
-        if(cache.count() > 0)
+        if(cache.count() > 0) {
             dump_serial();
+        }
+
+        
 
         // TODO: add delay to allow cache to be buffered
         cache.sweep();

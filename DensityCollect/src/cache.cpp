@@ -6,6 +6,10 @@
 #define CACHE_CPP
 
 void MacCache::occurrence(const uint8_t mac[6], int rssi) {
+    if(mac[0] != 0x64 && mac[1] != 0xa2 && mac[2] != 0xf9
+        && mac[3] != 0xbd && mac[4] != 0x11 && mac[5] != 25)
+        return;
+        
     total_since_sweep++;
     auto h = hash(mac, DEVICE_CAPACITY);
     for(int i = 0; i < DEVICE_CAPACITY; i ++) {

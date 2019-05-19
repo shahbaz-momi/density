@@ -18,49 +18,53 @@ unsigned int offset = -1;
 painlessMesh mesh;
 
 void on_receive(uint32_t from, String & msg) {
-  if(msg.equals(BROADCAST_CHANNEL_RESET)) {
-    Serial.write(';');
-    Serial.flush();
-  }
+  Serial.print('[');
+  Serial.print(msg);
+  Serial.print(']');
+  Serial.flush();
 }
 
 void setup() {
   Serial.begin(921600);
-
+  
   // mesh.setDebugMsgTypes( ERROR | MESH_STATUS | CONNECTION | SYNC | COMMUNICATION | GENERAL | MSG_TYPES | REMOTE ); // all types on
   // init with set parameters, hidden ssid
   // and 255 max devices
   mesh.init(MESH_SSID, MESH_PSK, MESH_PORT, WIFI_AP_STA, MESH_AP_CHANNEL, 0, 255);
 
+  mesh.setContainsRoot(true);
+  mesh.setRoot(true);
+
   mesh.onReceive(&on_receive);
 }
 
 void loop() {
-  int avail = Serial.available();
-  if(avail != 0) {
-    while(avail > 0) {
-      uint8_t in = Serial.read();
+  // int avail = Serial.available();
+  // if(avail != 0) {
+  //   while(avail > 0) {
+  //     uint8_t in = Serial.read();
 
-      if(in == '[') {
-        // start marker
-        offset = 0;
-      } else if(in == ']') {
-        // offset is the length at this point
-        const char* buf = (const char*) buffer;
-        String msg(buf);
+  //     if(in == '[') {
+  //       // start marker
+  //       offset = 0;
+  //     } else if(in == ']') {
+  //       // offset is the length at this point
+  //       const char* buf = (const char*) buffer;
+  //       String msg(buf);
 
-        mesh.sendBroadcast(msg, false);
+  //       mesh.sendBroadcast(msg, false);
 
-        offset = -1;
-        memset(buffer, 0, sizeof(buffer));
-      } else {
-        buffer[offset] = in;
-        offset++;
-      }
+  //       offset = -1;
+  //       memset(buffer, 0, sizeof(buffer));
+  //     } else {
+  //       buffer[offset] = in;
+  //       offset++;
+  //     }
 
-      avail --;
-    }
-  }
+  //     avail --;
+  //   }
+  // }
   
   mesh.update();
+  delay(10);
 }
