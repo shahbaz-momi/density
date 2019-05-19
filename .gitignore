@@ -6,3 +6,4 @@
 .vscode/launch.json
 
 node_modules/
+package-lock.json

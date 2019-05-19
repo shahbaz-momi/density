@@ -1,21 +1,40 @@
 {
   "name": "frontend-test",
-  "version": "1.0.0",
-  "scripts": {
-    "client": "cd client && npm start",
-    "server": "cd server && nodemon server.js",
-    "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\""
-  },
+  "version": "0.1.0",
+  "private": true,
+  "proxy": "http://localhost:6600/",
   "dependencies": {
-    "body-parser": "^1.18.3",
-    "express": "^4.16.4",
-    "google-map-react": "^1.1.4",
+    "bootstrap": "^4.3.1",
     "heatmap.js": "^2.0.5",
+    "react": "^16.8.6",
+    "react-anchor-link-smooth-scroll": "^1.0.12",
+    "react-bootstrap": "^1.0.0-beta.8",
+    "react-dom": "^16.8.6",
+    "react-router": "^5.0.0",
     "react-router-dom": "^5.0.0",
-    "websocket": "^1.0.28",
-    "ws": "^7.0.0"
+    "react-scripts": "3.0.1",
+    "react-websocket": "^2.0.1",
+    "websocket": "^1.0.28"
   },
-  "devDependencies": {
-    "concurrently": "^4.0.1"
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

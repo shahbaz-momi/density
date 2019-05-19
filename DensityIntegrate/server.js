@@ -6,7 +6,7 @@ const wsList = [];
 
 // config
 const TCP_PORT = 9000;
-const WS_PORT = 3000;
+const WS_PORT = 4000;
 const HOST = 'localhost';
 
 // server instance
@@ -30,17 +30,33 @@ server.on("connection", function(socket){
     // when the client sends data
     socket.on("data", function(data){
         console.log("Data from %s: %s", remoteAddress, data);
-
         for(let webSocket of wsList){
             if(webSocket != null) {
-                var input = String(data).split(",");
-                var deviceID  = input[0];
-                var xCoordinate = input[1];
-                var yCoordinate = input[2];
-                var time = input[3];
-                var myDevice = new Device(deviceID, xCoordinate, yCoordinate, time);
-                var myJSON = JSON.stringify(myDevice);
-                webSocket.send(myJSON);
+                var input = String(data);
+                if(input.indexOf(";") != -1){
+                    input = input.split(";");
+                    for(let deviceObject of input){
+                        deviceObject = deviceObject.split(",");
+                        var deviceID  = deviceObject[0];
+                        var xCoordinate = deviceObject[1];
+                        var yCoordinate = deviceObject[2];
+                        var time = deviceObject[3];
+                        var myDevice = new Device(deviceID, xCoordinate, yCoordinate, time);
+                        var myJSON = JSON.stringify(myDevice);
+                        webSocket.send(myJSON);
+                    } 
+                }
+                else {
+                    input = input.split(",");
+                    var input = String(data).split(",");
+                    var deviceID  = input[0];
+                    var xCoordinate = input[1];
+                    var yCoordinate = input[2];
+                    var time = input[3];
+                    var myDevice = new Device(deviceID, xCoordinate, yCoordinate, time);
+                    var myJSON = JSON.stringify(myDevice);
+                    webSocket.send(myJSON);
+                }
             }
         }
 

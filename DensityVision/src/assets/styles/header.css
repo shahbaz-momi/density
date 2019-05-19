@@ -1,0 +1,97 @@
+.nav_logo{
+    height: 80px;
+}
+
+.nav_banner{
+    background-color: #D8D8D8;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 0 5rem 0 5rem;
+    margin: 0;
+}
+.nav_banner a{
+    color: #7F7F7F;
+    padding-left: 0.1rem;
+    font-size: 1rem;
+    font-family: 'Open Sans', sans-serif;
+    margin: 1rem;
+}
+
+.nav_link{
+    transition: all 0.25s ease;
+}
+
+nav .navbar .navbar-expand-lg .navbar-light .b_color .navbar-collapse{
+    background-color: #EDEDED;
+}
+
+.nav-item{
+    margin: 0 4rem 0 4rem;
+}
+
+.buffer {
+    padding-bottom: 8rem;
+} 
+
+
+/* navbar */
+.navbar-default {
+    background-color: #EDEDED;
+    border-color: #EDEDED;
+}
+/* Title */
+.navbar-default .navbar-brand {
+    color: #EDEDED;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    color: #EDEDED;
+}
+/* Link */
+.navbar-default .navbar-nav > li > a {
+    color: #EDEDED;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: #EDEDED;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+    color: #EDEDED;
+    background-color: #EDEDED;
+}
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+    color: #EDEDED;
+    background-color: #EDEDED;
+}
+/* Caret */
+.navbar-default .navbar-nav > .dropdown > a .caret {
+    border-top-color: #EDEDED;
+    border-bottom-color: #EDEDED;
+}
+.navbar-default .navbar-nav > .dropdown > a:hover .caret,
+.navbar-default .navbar-nav > .dropdown > a:focus .caret {
+    border-top-color: #EDEDED;
+    border-bottom-color: #EDEDED;
+}
+.navbar-default .navbar-nav > .open > a .caret,
+.navbar-default .navbar-nav > .open > a:hover .caret,
+.navbar-default .navbar-nav > .open > a:focus .caret {
+    border-top-color: #EDEDED;
+    border-bottom-color: #EDEDED;
+}
+
+
+a{
+    color: grey;
+    transition: all 0.25s ease;
+}
+
+a:hover{
+    color: grey;
+    text-decoration: none;
+    opacity: 0.6;
+}
