@@ -83,3 +83,15 @@ nav .navbar .navbar-expand-lg .navbar-light .b_color .navbar-collapse{
     border-top-color: #EDEDED;
     border-bottom-color: #EDEDED;
 }
+
+
+a{
+    color: grey;
+    transition: all 0.25s ease;
+}
+
+a:hover{
+    color: grey;
+    text-decoration: none;
+    opacity: 0.6;
+}

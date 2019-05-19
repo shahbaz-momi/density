@@ -51,3 +51,11 @@
 .demo_landing{
     width: 250px;
 }
+
+.try_text img {
+    width: 350px;
+}
+
+.try_text hr {
+    width: 30%;
+}

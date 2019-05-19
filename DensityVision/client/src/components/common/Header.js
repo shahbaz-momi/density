@@ -16,29 +16,27 @@ class Header extends Component {
                 </button>
                 <div className="container collapse navbar-collapse" id="navbarTogglerDemo01">
                     <a className="navbar-brand" href="#">
-                        <AnchorLink href='#home'>
-                            <img className = "nav_logo" src = {nav_logo} alt="nav_logo" />
-                        </AnchorLink>
+                        <img className = "nav_logo" src = {nav_logo} alt="nav_logo" />
                     </a>
                     <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
                         <li className="nav-item nav-link">
                                 <AnchorLink href='#about'>
-                                    About
+                                    <span>About</span>
                                 </AnchorLink>
                         </li>
                         <li className="nav-item nav-link">
                                 <AnchorLink href='#tech'>
-                                    Tech
+                                <span>Tech</span>
                                 </AnchorLink>
                         </li>
                         <li className="nav-item nav-link">
                                 <AnchorLink href='#apps'>
-                                    Applications
+                                <span>Applications</span>
                                 </AnchorLink>
                         </li>
                         <li className="nav-item nav-link">
                                 <AnchorLink href='#demo'>
-                                    Demo
+                                <span>Demo</span>
                                 </AnchorLink>
                         </li>
                     </ul>

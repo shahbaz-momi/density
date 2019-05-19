@@ -5,6 +5,7 @@ import ru_logo from '../../assets/images/ru_logo.svg';
 import library from '../../assets/images/library.svg';
 import streets from '../../assets/images/streets.svg';
 import demo_landing from  '../../assets/images/demo_landing.svg';
+import demo_text from  '../../assets/images/demo_text.png';
 import '../../assets/styles/home.css';
 
 class Try extends Component {
@@ -13,11 +14,8 @@ class Try extends Component {
         <Fragment>
             <div id = "demo">
             <div className = "try_text">
-                <p>
-                TRY  
-                <span> DENSITY </span>
-                TODAY!
-                </p>
+                <img src = {demo_text} alt = "demo_text"/>
+                <hr />
             </div>
             <div className = "try_icons">
                 <div className = "try_container">

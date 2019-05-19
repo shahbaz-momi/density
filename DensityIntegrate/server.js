@@ -6,7 +6,7 @@ const wsList = [];
 
 // config
 const TCP_PORT = 9000;
-const WS_PORT = 3000;
+const WS_PORT = 4000;
 const HOST = 'localhost';
 
 // server instance
