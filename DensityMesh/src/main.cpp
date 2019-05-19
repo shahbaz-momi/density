@@ -3,6 +3,8 @@
 #include <ESP8266WiFi.h>
 #include "painlessMesh.h"
 
+#define BROADCAST_CHANNEL_RESET "channel_reset"
+
 #define BUFFER_SIZE 20000
 
 #define MESH_SSID "density_mesh"
@@ -15,13 +17,22 @@ unsigned int offset = -1;
 
 painlessMesh mesh;
 
+void on_receive(uint32_t from, String & msg) {
+  if(msg.equals(BROADCAST_CHANNEL_RESET)) {
+    Serial.write(';');
+    Serial.flush();
+  }
+}
+
 void setup() {
   Serial.begin(921600);
 
-  mesh.setDebugMsgTypes( ERROR | MESH_STATUS | CONNECTION | SYNC | COMMUNICATION | GENERAL | MSG_TYPES | REMOTE ); // all types on
+  // mesh.setDebugMsgTypes( ERROR | MESH_STATUS | CONNECTION | SYNC | COMMUNICATION | GENERAL | MSG_TYPES | REMOTE ); // all types on
   // init with set parameters, hidden ssid
   // and 255 max devices
   mesh.init(MESH_SSID, MESH_PSK, MESH_PORT, WIFI_AP_STA, MESH_AP_CHANNEL, 0, 255);
+
+  mesh.onReceive(&on_receive);
 }
 
 void loop() {
