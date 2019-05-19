@@ -12,7 +12,6 @@
     text-align: center;
 }
 
-
 .ru_inputs button{
     border-radius: 30px;
     background-image: linear-gradient(#73d5f1, #4b88cb);
@@ -40,4 +39,9 @@
     -webkit-text-fill-color: transparent;
     padding: 0.5rem;
     padding-right: 0;
+}
+
+.search_settings{
+    text-align: center;
+    color: grey;
 }

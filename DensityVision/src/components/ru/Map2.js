@@ -30,12 +30,11 @@ class Map2 extends Component {
     
   render(){
       const {x,y} = this.state
-      
       var dataPoint = { 
         x: x*100, 
         y: y*100, 
         radius: 30,
-        value: 100 
+        value: 10 
       };
       var data = {
         max: 100,
@@ -57,11 +56,11 @@ class Map2 extends Component {
               <div className = "stat"><i className="fas fa-signal"></i> 89%</div>
               <p className = "details">FOR MORE DETAILS SCROLL DOWN</p>
               <div className="map_icons">
-                <i class="fas fa-map-pin"></i>
-                <i class="fas fa-sync"></i>
-                <i class="fas fa-share-square"></i>
-                <i class="fas fa-info-circle"></i>
-                <i class="fas fa-cog"></i>
+                <i className="fas fa-map-pin"></i>
+                <i className="fas fa-sync"></i>
+                <i className="fas fa-share-square"></i>
+                <i className="fas fa-info-circle"></i>
+                <i className="fas fa-cog"></i>
               </div>
             </div>
             <ReactHeatmap data = {data} />

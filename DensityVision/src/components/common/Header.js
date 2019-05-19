@@ -6,7 +6,7 @@ import AnchorLink from 'react-anchor-link-smooth-scroll'
 class Header extends Component {
   render(){
       const divStyle = {
-        backgroundImage: "linear-gradient(rgb(237,237,237,1), rgb(237,237,237,1), rgb(237,237,237,0))"
+        backgroundImage: "linear-gradient(rgb(237,237,237,1), rgb(237,237,237,1), rgb(237,237,237,0.9), rgb(237,237,237,0))"
       }
       return (
         <Fragment> 

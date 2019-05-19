@@ -2,8 +2,12 @@
     width: 100vw;
 }
 
-.home_landing{
+.home_landing, .tech_landing, .about_landing, .applications_landing, .demo_landing{
     width: 500px;
+    transition: all 0.25s ease;
+}
+.home_landing:hover, .tech_landing:hover, .about_landing:hover, .applications_landing:hover, .demo_landing:hover{
+    transform: translateY(-8px)
 }
 
 .col-6{
@@ -14,9 +18,6 @@
 
 .intro_text{
     margin-top: 20%;
-}
-.about_text{
-    margin-top: 35%;
 }
 
 .intro_text hr, .about_text hr{
@@ -34,9 +35,9 @@
 .intro_text .btn:hover{
     transform: scale(1.1);
     padding : 0.5rem 1.5rem;
-    box-shadow: 0 0 5px gray;
+    box-shadow: 0 0 10px gray;
+    cursor: pointer;
 }
-
 
 .muted {
     font-size: 0.9rem;
@@ -58,4 +59,22 @@
 
 .try_text hr {
     width: 30%;
+}
+
+                
+                
+.scroll {
+    text-align: center;
+    position: fixed;
+    bottom: 100px;
+    right: 100px;
+    height: 2rem;
+    width: 2rem;
+    background-image: linear-gradient(#6dc8ee, #5599e1, #39679f);
+    border-radius: 100%;
+    color: white;
+}
+
+.scroll .fas{
+    margin-top: 0.4rem;
 }

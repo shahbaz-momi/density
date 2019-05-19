@@ -10,22 +10,19 @@ class AboutLanding extends Component {
           <div id = "about" className = "container home_banner">
             <div className = "row">
             <div className = "col-6">
-                <img className = "about_landing" src={about_landing} alt = "home_landing" />
-              </div>
+                  <img className = "about_landing" src={about_landing} alt = "home_landing" />
+                </div>
              <div className = "col-6">
-               <div className = "about_text">
-                <p className = "muted">WHAT IS DENSITY?</p>
-                <img src = {about_text} alt = "about_text"></img>
+               <div className = "intro_text">
+               <p className = "muted">WHAT IS DENSITY?</p>
+                <img className = "about_text" src={about_text} alt = "about_text" />
+                <hr />
+                <p className = "muted">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                </p>
+                <button className="btn">Learn More</button>
                </div>
               </div>
-            
-            <div className = "col-12">
-            <p className = "muted">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-            </p>
-            </div>
-             
             </div>
           </div>
         </Fragment>

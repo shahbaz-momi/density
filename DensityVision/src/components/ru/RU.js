@@ -6,6 +6,8 @@ import ru_logo from '../../assets/images/ru_logo.svg';
 import library from '../../assets/images/library.svg';
 import streets from '../../assets/images/streets.svg';
 import '../../assets/styles/inputs.css';
+import Dropdown from 'react-bootstrap/Dropdown';
+
 
 class RU extends Component {
   render(){
@@ -27,8 +29,14 @@ class RU extends Component {
                     <p className = "street_text">YONGE STREET</p>
                 </div>
             </div>
+            <div className = "search_settings">
+              <h4>Search Settings</h4>
+            </div>
+
+    
+
             <div className = "ru_inputs">
-                 <i className="fas fa-lg fa-layer-group"></i>
+                <i className="fas fa-lg fa-layer-group"></i>
                 <input className = "input_text" type="text" placeholder="SEARS ATRIUM"></input>
                 <i className="fas  fa-lg  fa-history"></i>
                 <input className = "input_text" type="text" placeholder="2:00PM"></input>

@@ -11,14 +11,13 @@
     height: 30rem;
 }
 
-
 .map_title{
     background-image: linear-gradient(#73d5f1, #4b88cb);
     border-radius: 20px;
     color: white;
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
-    width: 10rem;
+    width: 12rem;
     padding: 0.5rem 1rem 0.5rem 1rem;
     text-align: center;
     margin: 0;

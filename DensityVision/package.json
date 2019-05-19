@@ -4,14 +4,16 @@
   "private": true,
   "proxy": "http://localhost:6600/",
   "dependencies": {
+    "bootstrap": "^4.3.1",
+    "heatmap.js": "^2.0.5",
     "react": "^16.8.6",
     "react-anchor-link-smooth-scroll": "^1.0.12",
+    "react-bootstrap": "^1.0.0-beta.8",
     "react-dom": "^16.8.6",
     "react-router": "^5.0.0",
+    "react-router-dom": "^5.0.0",
     "react-scripts": "3.0.1",
     "react-websocket": "^2.0.1",
-    "heatmap.js": "^2.0.5",
-    "react-router-dom": "^5.0.0",
     "websocket": "^1.0.28"
   },
   "scripts": {
