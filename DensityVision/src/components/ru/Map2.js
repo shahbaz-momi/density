@@ -4,7 +4,7 @@ import Stats from './Stats';
 import { w3cwebsocket as W3CWebSocket } from "websocket";
 import '../../assets/styles/map.css';
 
-const client = new W3CWebSocket('ws://127.0.0.1:4100');
+const client = new W3CWebSocket('ws://127.0.0.1:4000');
 
 class Map2 extends Component {
     state = {
@@ -25,7 +25,7 @@ class Map2 extends Component {
     client.onmessage = (message) => {
        let data = JSON.parse(message.data)
        console.log(data);
-       this.setState({x : data.x, y : data.y});
+       this.setState({x : data.xCoordinate, y : data.yCoordinate});
     };
   }
     
@@ -44,6 +44,7 @@ class Map2 extends Component {
           dataPoint
         ]
       };
+      console.log(dataset)
       return (
         <Fragment>
           <div className = "map_container">

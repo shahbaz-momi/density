@@ -17,8 +17,11 @@ class ReactHeatmap extends Component {
   } 
   componentDidUpdate(){
     if (this.heatmapInstance){
-      this.heatmapInstance.setData(this.props.data)
       console.log(this.heatmapInstance.getData())
+      if(this.props.data.x != undefined && this.props.data.y != undefined){
+        this.heatmapInstance.setData(this.props.data)
+        console.log(this.heatmapInstance.getData())
+      }
     }
   }
   render(){

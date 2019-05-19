@@ -4,7 +4,7 @@
 
 #define DEFAULT_CHANNEL 11
 
-#define NODE_ID "4"
+#define NODE_ID "3"
 
 #include <Arduino.h>
 #include <ESP8266WiFi.h>

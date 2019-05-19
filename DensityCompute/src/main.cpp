@@ -69,45 +69,26 @@ void process1() {
 
     for(const auto & i : devices) {
         auto d = (Device*) i.second;
-        int zs = 0;
 
-        for(int j = 0; j < 5; j ++) {
-            if(d->dists[j] == 0.0)
-                zs ++;
+        if(d->dists[0] != 0.0 && d->dists[2] != 0.0 && d->dists[3] != 0.0) {
+            // have enough data to go now
+            Circle circles[3];
+            circles[0].radius = d->dists[0];
+            circles[0].x = node_locations[0].x;
+            circles[0].y = node_locations[0].y;
+
+            circles[1].radius = d->dists[2];
+            circles[1].x = node_locations[2].x;
+            circles[1].y = node_locations[2].y;
+
+            circles[2].radius = d->dists[3];
+            circles[2].x = node_locations[3].x;
+            circles[2].y = node_locations[3].y;
+
+            auto out = Triangulation::triangulate(circles);
+            cout << out->x << " " << out->y << endl;
+            points[i.first] = out;
         }
-
-        if(zs >= 3)
-            continue;
-
-        if(zs < 2) {
-            double temp[5];
-            memcpy(temp, d->dists, sizeof(temp));
-
-            // we have more than 3 nodes picking this up
-            // blank out the weakest ones
-            sort(temp, temp + 5);
-            // 0 out the first 2
-            for(int j = 0; j < 5; j ++) {
-                if(d->dists[j] == temp[0] ||
-                    d->dists[j] == temp[1])
-                    d->dists[j] = 0.0;
-            }
-        }
-
-        // have enough data to go now
-        Circle circles[3];
-        int offset = 0;
-        for(int j = 0; j < 5; j ++) {
-            if(d->dists[j] != 0.0) {
-                circles[offset].radius = d->dists[j];
-                circles[offset].x = node_locations[offset].x;
-                circles[offset].y = node_locations[offset].y;
-            }
-        }
-
-        auto out = Triangulation::triangulate(circles);
-        cout << out->x << " " << out->y << endl;
-        points[i.first] = out;
     }
 
     auto output = new string;
@@ -224,6 +205,9 @@ void process(string & in) {
             // do that part first
             // take that substr
             auto inner = in.substr(startMark + 1, endMark - startMark - 1);
+
+            cout << inner << endl;
+
             process0(inner);
 
             // end mark is the ending of the string
