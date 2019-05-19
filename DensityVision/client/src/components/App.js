@@ -3,6 +3,8 @@ import { HashRouter, Route } from 'react-router-dom';
 import RU from './ru/RU';
 import Home from './home/Home';
 import Header from './common/Header'
+import Footer from './common/Footer'
+
 class App extends Component {
   render(){
       return (
@@ -14,6 +16,7 @@ class App extends Component {
               <Route path="/ruhacks" exact component = {RU}/>
             </div>
           </HashRouter>
+          <Footer />
         </Fragment>
       );
     }

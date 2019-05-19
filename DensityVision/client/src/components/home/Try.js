@@ -4,10 +4,14 @@ import '../../assets/styles/try.css';
 import ru_logo from '../../assets/images/ru_logo.svg';
 import library from '../../assets/images/library.svg';
 import streets from '../../assets/images/streets.svg';
+import demo_landing from  '../../assets/images/demo_landing.svg';
+import '../../assets/styles/home.css';
+
 class Try extends Component {
   render(){
       return (
         <Fragment>
+            <div id = "demo">
             <div className = "try_text">
                 <p>
                 TRY  
@@ -30,6 +34,9 @@ class Try extends Component {
                     <img className = "try_icon" src = {streets} alt = "street"/>
                     <p className = "street_text">YONGE STREET</p>
                 </div>
+                <br/>
+            <img className = "demo_landing" src={demo_landing} alt = "demo_landing" />
+            </div>
             </div>
         </Fragment>
       );

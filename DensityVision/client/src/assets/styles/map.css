@@ -35,14 +35,14 @@
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
     font-size: 0.8rem;
-    width: 10rem;
+    width: 15rem;
     height: 28rem;
     padding: 0.5rem 1rem 0.5rem 1rem;
     text-align: left;
     margin: 0;
     position: absolute;
-    right: 0px;
-    top: 28rem;
+    right: -12px;
+    top: 35rem;
     margin-right: 11.5rem;
     color: #7F7F7F;
 }
@@ -70,8 +70,8 @@
     background: -webkit-linear-gradient(#63b6d9, #39679f);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: 1.1rem;
-    padding: 0.5rem 1rem 0.5rem 1rem;
+    font-size: 0.8rem;
+    padding: 0.5rem 0.8rem 0.5rem 0.8rem;
     transition: all 0.25s ease;
 }
 .map_icons .fas:hover{
