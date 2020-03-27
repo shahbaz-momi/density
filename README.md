@@ -3,6 +3,9 @@
 
 - [X] Density v1.0 completed
 
+## Video + Screenshots
+https://ruhacks2019.hackerearth.com/challenges/hackathon/ru-hacks-2019/dashboard/1e422e1/submission/
+
 ## Project Description
 
 In a world with such a prominent integration of technology, we continue to struggle in the task of gathering quantitative data on human behaviour. With density, we provide a software solution to modelling human movement and density patterns through data collected through smartphone locations. This technology provides an innovate solution to many global issues such as emergency service response times, inventory systems and improves accessibility.
